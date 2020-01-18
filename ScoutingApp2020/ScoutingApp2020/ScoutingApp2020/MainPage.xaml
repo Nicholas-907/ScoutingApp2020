@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿w<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="ScoutingApp2019.MainPage"
@@ -38,19 +38,37 @@
                 <Label Text="Left Initiation Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
                 <Switch x:Name="CrossInitiationLineSwitch" Toggled="CrossInitiationLineSwitch_Toggled" VerticalOptions="Center" Scale="1.5"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="125">
-                 <Label Text="Inner Port" FontSize="32" TextColor="White">>
+         <!-- Scoring -->
+               <StackLauout Orientation="Vertical" Spacing=""/> 
+                <StackLayout Orientation="Horizontal" Spacing=""/>
+                 <Label Text="" FontSize="24" TextColor="White"/>
+                    <Label Text="Inner Port" VerticalTextAllignment:"Center" FontSize="24" TextColor="White"/>
+                    <Button x:Name="innerPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> /> 
+                    <Label Text="0" x:Name="innerPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
+                    <Button x:Name="innerPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                 </StackLayout>
+              ]
                 
-                
-                <Label Text="" FontSize="24" TextColor="White"/>
-                    <Label Text="Inner Port" FontSize="24" TextColor="White"/>
-                    <Button x:Name="innerPortMinus" Text="-"/> 
-                    <Label Text="Middle Level" FontSize="24" TextColor="White"/>
-                    <Label Text="Bottom Level" FontSize="24" TextColor="White"/>
+                <StackLayout Orientation="Horizantal"
+                 <Label Text="" FontSize="24" TextColor="White"/>
+                 <Label Text="Outer Port" FontSize="24" TextColor="White"/>
+                 <Button x:Name="outerPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> />
+                 <Label Text="0" x:Name="outerPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
+                 <Button x:Name="outerPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical" Spacing="75">
+                <StackLayout Orientation="Horizantal"
+                 <Label Text="" FontSize="24" TextColor="White"/>
+                 <Label Text="Bottom Port" FontSize="24" TextColor="White"/>
+                 <Button x:Name="bottomPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> />
+                 <Label Text="0" x:Name="bottomPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
+                 <Button x:Name="bottomPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                </StackLayout>
+
+
+
+
+        <StackLayout Orientation="Vertical" Spacing="75">
                     <!--Rocket-->
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White" />
