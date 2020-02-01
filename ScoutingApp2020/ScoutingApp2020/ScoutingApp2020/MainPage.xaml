@@ -1,9 +1,9 @@
-﻿w<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="ScoutingApp2019.MainPage"
+            x:Class="ScoutingApp2020.MainPage"
             x:Name="MainTabbedPage"
-            Title="Scouting App 2019"
+            Title="Scouting App 2020"
             BackgroundColor="Black"
             BarTextColor="White"
             CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
@@ -19,145 +19,144 @@
 
     </ContentPage>
 
-    <ContentPage Title="Auto" Padding="10" TabIndex="1">
+    
+    <!-- PAGE 2 Autonomous -->
+    <ContentPage Title="Autonomous" Padding="10" TabIndex="1">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Left Initiation Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
+                    <Switch x:Name="CrossInitiationLineSwitch" VerticalOptions="Center" Scale="1.5"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="500">
+                    <!-- Scoring -->
+                    <StackLayout Orientation="Vertical" Spacing="200">
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Inner Port" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="InnerPortMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            <Label Text="0" x:Name="InnerPortTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="InnerPortPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                        </StackLayout>
 
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Outer Port" FontSize="24" TextColor="White"/>
+                            <Button x:Name="OuterPortMinusAutonomous" Text="-" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            <Label Text="0" x:Name="OuterPortTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="OuterPortPlusAutonomous" Text="+" FontSize="24"   WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Bottom Port" FontSize="24" TextColor="White"/>
+                            <Button x:Name="BottomPortMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            <Label Text="0" x:Name="BottomPortTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="BottomPortPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!--Image-->
+
+                    <!--Other-->
+                    <StackLayout Orientation="Vertical" Spacing="200">
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Missed" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="MissedMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            <Label Text="0" x:Name="MissedTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="MissedPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Dropped" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="DroppedMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            <Label Text="0" x:Name="DroppedTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="DroppedPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Label Text="" FontSize="24" TextColor="White"/>
+                            <Label Text="Picked Up" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="PickedUpMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Green" BorderWidth="4"/>
+                            <Label Text="0" x:Name="PickedUpTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="PickedUpPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Green" BorderWidth="4"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
+
+    <!-- PAGE 3 Teleop -->
     <ContentPage Title=" Tele" Padding="10" TabIndex="2">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" Spacing="500">
+                        <!-- Scoring -->
+                        <StackLayout Orientation="Vertical" Spacing="150">
+                            <StackLayout Orientation="Horizontal" Spacing="2">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Inner Port" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                                <Button x:Name="InnerPortMinusTeleop" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            <Label Text="0" x:Name="InnerPortTotalTeleop" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="InnerPortPlusTeleop" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            </StackLayout>
 
-    </ContentPage>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Outer Port" FontSize="24" TextColor="White"/>
+                               <Button x:Name="OuterPortMinusTeleop" Text="-" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                              <Label Text="0" x:Name="OuterPortTotalTeleop" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                              <Button x:Name="OuterPortPlusTeleop" Text="+" FontSize="24"   WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                           </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Bottom Port" FontSize="24" TextColor="White"/>
+                            <Button x:Name="BottomPortMinusTeleop" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            <Label Text="0" x:Name="BottomPortTotalTeleop" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="BottomPortPlusTeleop" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <!--Image-->
+
+                        <!--Other-->
+                        <StackLayout Orientation="Vertical" Spacing="150">
+                            <StackLayout Orientation="Horizontal" Spacing="2">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Missed" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="MissedMinusTeleop" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            <Label Text="0" x:Name="MissedTotalTeleop" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="MissedPlusTeleop" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="2">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Dropped" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                            <Button x:Name="DroppedMinusTeleop" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            <Label Text="0" x:Name="DroppedTotalTeleop" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                            <Button x:Name="DroppedPlusTeleop" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="2">
+                                <Label Text="" FontSize="24" TextColor="White"/>
+                                <Label Text="Spun Control Panel" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
+                                <Button x:Name="ControlPanelMinus" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
+                                <Label Text="0" x:Name="ControlPanelTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                                <Button x:Name="ControlPanelPlus" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
+                            </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Right Color?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
+                            <Switch x:Name="RightColorSwitch" VerticalOptions="Center" Scale="1.5"/>
+                        </StackLayout>
+                    </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+        </ContentPage>
     <ContentPage Title="EndGame" Padding="10" TabIndex="3">
+        
 
     </ContentPage>
 </TabbedPage>
 
-<!-- PAGE 2 Autonomous -->
-<ContentPage Title="Autonomous" Padding="10" TabIndex="1">
-    <ScrollView VerticalScrollBarVisibility="Never">
-        <StackLayout Orientation="Vertical">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Left Initiation Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
-                <Switch x:Name="CrossInitiationLineSwitch" Toggled="CrossInitiationLineSwitch_Toggled" VerticalOptions="Center" Scale="1.5"/>
-            </StackLayout>
-         <!-- Scoring -->
-               <StackLauout Orientation="Vertical" Spacing=""/> 
-                <StackLayout Orientation="Horizontal" Spacing=""/>
-                 <Label Text="" FontSize="24" TextColor="White"/>
-                    <Label Text="Inner Port" VerticalTextAllignment:"Center" FontSize="24" TextColor="White"/>
-                    <Button x:Name="innerPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> /> 
-                    <Label Text="0" x:Name="innerPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
-                    <Button x:Name="innerPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                </StackLayout>
-              ]
-                
-                <StackLayout Orientation="Horizantal"
-                 <Label Text="" FontSize="24" TextColor="White"/>
-                 <Label Text="Outer Port" FontSize="24" TextColor="White"/>
-                 <Button x:Name="outerPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> />
-                 <Label Text="0" x:Name="outerPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
-                 <Button x:Name="outerPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizantal"
-                 <Label Text="" FontSize="24" TextColor="White"/>
-                 <Label Text="Bottom Port" FontSize="24" TextColor="White"/>
-                 <Button x:Name="bottomPortMinus" Text="-" FontSize="24" Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/> />
-                 <Label Text="0" x:Name="bottomPortTotal" FontSize="24" VerticalTextAllignment="Center" TextColor="White" />
-                 <Button x:Name="bottomPortPlus" Text="+" FontSize="24"  Clicked="TBD" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                </StackLayout>
-
-
-
-
-        <StackLayout Orientation="Vertical" Spacing="75">
-                    <!--Rocket-->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White" />
-                    </StackLayout>
-                    <!--Top-->
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketTCargoMinus" Text="-"  FontSize="24" Clicked="SandRocketTCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketTCargoTotal"  FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                        <Button x:Name="sandRocketTCargoPlus" Text="+" FontSize="24"  Clicked="SandRocketTCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-
-                        <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketTHatchMinus" Text="-" FontSize="24" Clicked="SandRocketTHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketTHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"  />
-                        <Button x:Name="sandRocketTHatchPlus" Text="+" FontSize="24" Clicked="SandRocketTHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                    </StackLayout>
-
-                    <!--Mid-->
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketMCargoMinus" Text="-" FontSize="24" Clicked="SandRocketMCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketMCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                        <Button x:Name="sandRocketMCargoPlus" Text="+" FontSize="24" Clicked="SandRocketMCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-
-                        <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketMHatchMinus" Text="-" FontSize="24" Clicked="SandRocketMHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketMHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                        <Button x:Name="sandRocketMHatchPlus" Text="+" FontSize="24" Clicked="SandRocketMHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                    </StackLayout>
-
-                    <!--Bottom-->
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketBCargoMinus" Text="-" FontSize="24" Clicked="SandRocketBCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketBCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                        <Button x:Name="sandRocketBCargoPlus" Text="+" FontSize="24" Clicked="SandRocketBCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-
-                        <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandRocketBHatchMinus" Text="-" FontSize="24" Clicked="SandRocketBHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandRocketBHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                        <Button x:Name="sandRocketBHatchPlus" Text="+" FontSize="24" Clicked="SandRocketBHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                    </StackLayout>
-                </StackLayout>
-
-                <StackLayout Orientation="Vertical" Spacing="75">
-                    <!--Cargo Ship-->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
-                        <Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="SandCargoShipMinus" Text="-" FontSize="24" Clicked="SandCargoShipMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-                        <Label Text="0" x:Name="SandCargoShipTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="SandCargoShipPlus" Text="+" FontSize="24" Clicked="SandCargoShipPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
-
-                        <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandShipHatchMinus" Text="-" FontSize="24" Clicked="SandShipHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                        <Label Text="0" x:Name="sandShipHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandShipHatchPlus" Text="+" FontSize="24" Clicked="SandShipHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label Text="Dropped" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
-                        <Label Text="0" x:Name="sandFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
-
-                        <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
-                        <Label Text="0" x:Name="sandFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
-                    </StackLayout>
-                </StackLayout>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <StackLayout Orientation="Vertical">
-                    <Label Text="Fouls" FontSize="36" VerticalOptions="Center" TextColor="White"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="SandFoulsMinus" Text="-" FontSize="24" Clicked="SandFoulsMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
-                        <Label Text="0" x:Name="SandFoulsTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                        <Button x:Name="SandFoulsPlus" Text="+" FontSize="24" Clicked="SandFoulsPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
-                    </StackLayout>
-                </StackLayout>
-            </StackLayout>
-        </StackLayout>
-    </ScrollView>
-</ContentPage>
