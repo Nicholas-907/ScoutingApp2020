@@ -35,6 +35,7 @@
                             <Label Text="" FontSize="24" TextColor="White"/>
                             <Label Text="Inner Port" VerticalTextAlignment="Center"  FontSize="24" TextColor="White"/>
                             <Button x:Name="InnerPortMinusAutonomous" Text="-" FontSize="24" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
+                      
                             <Label Text="0" x:Name="InnerPortTotalAutonomous" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
                             <Button x:Name="InnerPortPlusAutonomous" Text="+" FontSize="24"  WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                         </StackLayout>
